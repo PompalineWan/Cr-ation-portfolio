@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="design.css">
 		<link rel="icon" href="./Image/focus.svg" type="image/svg+xml">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 	</head>
 	<body>
 		<div class="background"></div>
@@ -83,44 +84,151 @@
 			<section id="about">
 				<h2>À propos de moi</h2>
 				<div class="about-tabs">
-					<button class="tab-button active" data-tab="hard">Hard Skills</button>
+					<button class="tab-button active" data-tab="Web">Web et programmation</button>
+					<button class="tab-button" data-tab="Base de données">Base de données</button>
+					<button class="tab-button" data-tab="méthodes">Conception / méthodes</button>
+					<button class="tab-button" data-tab="Réseaux">Réseaux</button>
+					<button class="tab-button" data-tab="Outils">Outils</button>
 					<button class="tab-button" data-tab="soft">Soft Skills</button>
 					<button class="tab-button" data-tab="lang">Langues</button>
 					<button class="tab-button" data-tab="interets">Centres d'intérêt</button>
 				</div>
 				<div class="about-content">
-					<div class="tab-content active" id="hard">
+					<div class="tab-content active" id="Web">
 						<div class="card">
-							<img src="./Image/html5.svg" alt="HTML" class="card-icon">
+							<i class="devicon-html5-plain"></i>
 							<span>HTML</span>
 						</div>
 						<div class="card">
-							<img src="./Image/javascript.svg" alt="JavaScript" class="card-icon">
+							<i class="devicon-css3-plain"></i>
+							<span>CSS</span>
+						</div>
+						<div class="card">
+							<i class="devicon-javascript-plain"></i>
 							<span>JavaScript</span>
 						</div>
 						<div class="card">
-							<img src="./Image/cplusplus.svg" alt="C++" class="card-icon">
+							<i class="devicon-php-plain"></i>
+							<span>PHP/API REST</span>
+						</div>
+						<div class="card">
+							<i class="devicon-cplusplus-plain"></i>
 							<span>C++</span>
 						</div>
 						<div class="card">
-							<img src="./Image/java.png" alt="Java" class="card-icon">
-							<span>Java</span>
+							<i class="devicon-c-original"></i>
+							<span>C</span>
 						</div>
 						<div class="card">
-							<img src="./Image/sqlite.svg" alt="SQLite" class="card-icon">
+							<i class="devicon-java-plain"></i>
+							<span>Java/JavaFX/Swing/JDBC</span>
+						</div>
+						<div class="card">
+							<i class="devicon-python-plain"></i>
+							<span>Python</span>
+						</div>
+					</div>
+					<div class="tab-content" id="Base de données">
+						<div class="card">
+							<i class="devicon-oracle-original"></i>
+							<span>Oracle</span>
+						</div>
+						<div class="card">
+							<i class="devicon-mysql-original"></i>
+							<span>MySQL</span>
+						</div>
+						<div class="card">
+							<i class="devicon-sqlite-plain"></i>
 							<span>SQLite</span>
 						</div>
 						<div class="card">
-							<img src="./Image/gnubash.svg" alt="Bash" class="card-icon">
+							<span>Modélisation conceptuelle (MCD/MLD)</span>
+						</div>
+						<div class="card">
+							<span>PL/SQL</span>
+						</div>
+					</div>
+					<div class="tab-content" id="méthodes">
+						<div class="card">
+							<i class="devicon-unifiedmodelinglanguage-plain"></i>
+							<span>UML</span>
+						</div>
+						<div class="card">
+							<span>MVC</span>
+						</div>
+						<div class="card">
+							<span>SCRUM/Agile</span>
+						</div>
+					</div>
+					<div class="tab-content" id="Réseaux">
+						<div class="card">
+							<i class="devicon-bash-plain"></i>
 							<span>Bash</span>
 						</div>
 						<div class="card">
-							<img src="./Image/git.svg" alt="Git" class="card-icon">
-							<span>Git</span>
+							<i class="devicon-ssh-original"></i>
+							<span>SSH</span>
 						</div>
 						<div class="card">
-							<img src="./Image/linux.svg" alt="linux" class="card-icon">
+							<i class="devicon-linux-plain"></i>
 							<span>Linux</span>
+						</div>
+						<div class="card">
+							<i class="devicon-debian-plain"></i>
+							<span>Debian</span>
+						</div>
+						<div class="card">
+							<i class="devicon-ubuntu-plain"></i>
+							<span>Ubuntu</span>
+						</div>
+						<div class="card">
+							 <i class="devicon-apache-plain"></i>
+							<span>Apache</span>
+						</div>
+						<div class="card">
+							<span>TCP/IP</span>
+						</div>
+						<div class="card">
+							<span>TCP/UDP</span>
+						</div>
+						<div class="card">
+							<span>DHCP</span>
+						</div>
+						<div class="card">
+							<span>DNS</span>
+						</div>
+					</div>
+					<div class="tab-content" id="Outils">
+						<div class="card">
+							<i class="devicon-github-original"></i>
+							<span>Github</span>
+						</div>
+						<div class="card">
+							<i class="devicon-gitlab-plain"></i>
+							<span>GitLab</span>
+						</div>
+						<div class="card">
+							<i class="devicon-visualstudio-plain"></i>
+							<span>VisualStudioCode</span>
+						</div>
+						<div class="card">
+							<i class="devicon-vscode-plain"></i>
+							<span>VScode</span>
+						</div>
+						<div class="card">
+							<i class="devicon-vscodium-plain"></i>
+							<span>VScodium</span>
+						</div>
+						<div class="card">
+							<i class="devicon-intellij-plain"></i>
+							<span>IntelliJ</span>
+						</div>
+						<div class="card">
+							<i class="devicon-figma-plain"></i>	
+							<span>Figma</span>
+						</div>
+						<div class="card">
+							<span>Penpot</span>
 						</div>
 					</div>
 					<div class="tab-content" id="soft">
