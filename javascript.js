@@ -10,14 +10,61 @@
       document.getElementById(button.dataset.tab).classList.add("active");
     });
   });
-  
+
    function openPopup(id) {
     document.getElementById(id).classList.add('active');
   }
   function closePopup(id) {
     document.getElementById(id).classList.remove('active');
   }
-  
+
+  // ===== THEME MANAGEMENT =====
+  function initTheme() {
+    // Détecter la préférence utilisateur ou charger depuis localStorage
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    const theme = storedTheme || (prefersDark ? 'dark' : 'dark');
+
+    if (theme === 'light') {
+      document.documentElement.classList.add('light-mode');
+      updateThemeIcon('☀️');
+    } else {
+      document.documentElement.classList.remove('light-mode');
+      updateThemeIcon('🌙');
+    }
+  }
+
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isLightMode = html.classList.toggle('light-mode');
+
+    const theme = isLightMode ? 'light' : 'dark';
+    localStorage.setItem('theme', theme);
+
+    updateThemeIcon(isLightMode ? '☀️' : '🌙');
+  }
+
+  function updateThemeIcon(icon) {
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.querySelector('.theme-icon').textContent = icon;
+    }
+  }
+
+  // Initialiser le thème au chargement
+  document.addEventListener('DOMContentLoaded', initTheme);
+
+  // Ajouter listener au bouton toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', toggleTheme);
+    }
+  });
+
+  // ===== END THEME MANAGEMENT =====
+
    document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".project-card, .formation-card, .tab-content");
 
@@ -31,4 +78,47 @@
     }, { threshold: 0.1 });
 
     elements.forEach(el => observer.observe(el));
+  });
+
+  // Smooth parallax scroll effect (optimisé)
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  });
+
+  function updateParallax() {
+    const scrollPos = window.scrollY;
+    const bgElement = document.querySelector(".background");
+
+    if (bgElement) {
+      bgElement.style.transform = `translateY(${scrollPos * 0.5}px)`;
+    }
+
+    const heroImage = document.querySelector(".image img");
+    if (heroImage) {
+      const glowIntensity = Math.min(0.6, 0.2 + (scrollPos * 0.0002));
+      heroImage.style.filter = `drop-shadow(0 0 40px rgba(0, 255, 128, ${glowIntensity}))`;
+    }
+
+    ticking = false;
+  }
+
+  // Fix scroll navigation
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        const navHeight = 70;
+        const targetPosition = targetSection.offsetTop - navHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
   });

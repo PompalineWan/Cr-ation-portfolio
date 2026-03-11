@@ -7,20 +7,30 @@
 		<link rel="stylesheet" href="design.css">
 		<link rel="icon" href="./Image/focus.svg" type="image/svg+xml">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 	</head>
 	<body>
 		<div class="background"></div>
+		<nav>
+			<a href="#hero">Accueil</a>
+			<a href="#formations">Formations</a>
+			<a href="#about">Compétences</a>
+			<a href="#projets">Projets</a>
+			<button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+				<span class="theme-icon">🌙</span>
+			</button>
+		</nav>
 		<main>
-			<section class="hero">
+			<section class="hero" id="hero">
 				<div class="content">
 					<h1>
 						<span class="highlight">Hello, I'm</span><br>
 						<span class="name">Pompaline</span>
 					</h1>
-					<p class="subtitle">Passionné par la cybersécurité et le développement logiciel.</p>
+					<p class="subtitle">Développeuse passionnée par l'informatique et les solutions innovantes.</p>
 					<p class="description">
-						Bonjour ! Je m'appelle Pompaline, étudiante en BUT Informatique à l’IUT d’Orsay. Je m’intéresse au développement logiciel, aux interfaces utilisateurs (WPF, Java, web) et aux bases de données. Je travaille actuellement sur des projets en Java, SQL et C#, et je cherche un stage pour approfondir mes compétences en développement.
-						J’aime apprendre par la pratique, relever des défis techniques et imaginer des solutions utiles.
+						Bonjour ! Je m'appelle Pompaline, étudiante en BUT Informatique à l'IUT d'Orsay. Je m'intéresse au développement logiciel, aux interfaces utilisateurs (WPF, Java, web), aux bases de données et aux systèmes informatiques. Je travaille actuellement sur des projets variés en Java, SQL, C# et web, et je cherche un stage pour approfondir mes compétences en ingénierie logicielle.
+						J'aime apprendre par la pratique, résoudre des problèmes complexes et concevoir des solutions utiles et performantes.
 					</p>
 					<div class="links">
 						<a href="https://www.linkedin.com/in/pompaline-wan-0824141b3/" target="_blank">
@@ -83,93 +93,210 @@
 			<section id="about">
 				<h2>À propos de moi</h2>
 				<div class="about-tabs">
-					<button class="tab-button active" data-tab="hard">Hard Skills</button>
+					<button class="tab-button active" data-tab="bdd">Base de Données</button>
+					<button class="tab-button" data-tab="reseaux">Réseaux</button>
+					<button class="tab-button" data-tab="systemes">Systèmes</button>
+					<button class="tab-button" data-tab="webdev">Développement Web</button>
+					<button class="tab-button" data-tab="appdev">Développement Applicatif</button>
+					<button class="tab-button" data-tab="methodes">Conception/Méthodes</button>
+					<button class="tab-button" data-tab="outils">Outils</button>
 					<button class="tab-button" data-tab="soft">Soft Skills</button>
 					<button class="tab-button" data-tab="lang">Langues</button>
 					<button class="tab-button" data-tab="interets">Centres d'intérêt</button>
 				</div>
 				<div class="about-content">
-					<div class="tab-content active" id="hard">
+					<!-- Base de Données -->
+					<div class="tab-content active" id="bdd">
 						<div class="card">
-							<img src="./Image/html5.svg" alt="HTML" class="card-icon">
-							<span>HTML</span>
-						</div>
-						<div class="card">
-							<img src="./Image/javascript.svg" alt="JavaScript" class="card-icon">
-							<span>JavaScript</span>
-						</div>
-						<div class="card">
-							<img src="./Image/cplusplus.svg" alt="C++" class="card-icon">
-							<span>C++</span>
-						</div>
-						<div class="card">
-							<img src="./Image/java.png" alt="Java" class="card-icon">
-							<span>Java</span>
-						</div>
-						<div class="card">
-							<img src="./Image/sqlite.svg" alt="SQLite" class="card-icon">
+							<i class="devicon-sqlite-plain colored"></i>
 							<span>SQLite</span>
 						</div>
 						<div class="card">
-							<img src="./Image/gnubash.svg" alt="Bash" class="card-icon">
-							<span>Bash</span>
+							<i class="devicon-oracle-original colored"></i>
+							<span>SQL (Oracle, MySQL)</span>
 						</div>
 						<div class="card">
-							<img src="./Image/git.svg" alt="Git" class="card-icon">
+							<i class="devicon-mysql-plain colored"></i>
+							<span>MCD/MLD</span>
+						</div>
+						<div class="card">
+							<i class="devicon-oracle-original colored"></i>
+							<span>PL/SQL</span>
+						</div>
+					</div>
+					<!-- Réseaux -->
+					<div class="tab-content" id="reseaux">
+						<div class="card">
+							<i class="devicon-bash-plain colored"></i>
+							<span>TCP/UDP</span>
+						</div>
+						<div class="card">
+							<i class="devicon-bash-plain colored"></i>
+							<span>Sockets</span>
+						</div>
+						<div class="card">
+							<i class="devicon-debian-plain colored"></i>
+							<span>Routage/DHCP/DNS</span>
+						</div>
+					</div>
+					<!-- Systèmes -->
+					<div class="tab-content" id="systemes">
+						<div class="card">
+							<i class="devicon-linux-plain colored"></i>
+							<span>Linux (Debian, Ubuntu)</span>
+						</div>
+						<div class="card">
+							<i class="devicon-apache-plain colored"></i>
+							<span>Apache2</span>
+						</div>
+						<div class="card">
+							<i class="devicon-bash-plain colored"></i>
+							<span>SSH</span>
+						</div>
+					</div>
+					<!-- Développement Web -->
+					<div class="tab-content" id="webdev">
+						<div class="card">
+							<i class="devicon-html5-plain colored"></i>
+							<span>HTML</span>
+						</div>
+						<div class="card">
+							<i class="devicon-css3-plain colored"></i>
+							<span>CSS</span>
+						</div>
+						<div class="card">
+							<i class="devicon-javascript-plain colored"></i>
+							<span>JavaScript</span>
+						</div>
+						<div class="card">
+							<i class="devicon-php-plain colored"></i>
+							<span>PHP</span>
+						</div>
+					</div>
+					<!-- Développement Applicatif -->
+					<div class="tab-content" id="appdev">
+						<div class="card">
+							<i class="devicon-java-plain colored"></i>
+							<span>Java</span>
+						</div>
+						<div class="card">
+							<i class="devicon-java-plain colored"></i>
+							<span>JavaFX/Swing</span>
+						</div>
+						<div class="card">
+							<i class="devicon-bash-plain colored"></i>
+							<span>API REST</span>
+						</div>
+						<div class="card">
+							<i class="devicon-java-plain colored"></i>
+							<span>JDBC</span>
+						</div>
+						<div class="card">
+							<i class="devicon-cplusplus-plain colored"></i>
+							<span>C++</span>
+						</div>
+						<div class="card">
+							<i class="devicon-python-plain colored"></i>
+							<span>Python</span>
+						</div>
+					</div>
+					<!-- Conception/Méthodes -->
+					<div class="tab-content" id="methodes">
+						<div class="card">
+							<i class="devicon-bash-plain colored"></i>
+							<span>UML</span>
+						</div>
+						<div class="card">
+							<i class="devicon-bash-plain colored"></i>
+							<span>MVC</span>
+						</div>
+					</div>
+					<!-- Outils -->
+					<div class="tab-content" id="outils">
+						<div class="card">
+							<i class="devicon-git-plain colored"></i>
 							<span>Git</span>
 						</div>
 						<div class="card">
-							<img src="./Image/linux.svg" alt="linux" class="card-icon">
-							<span>Linux</span>
+							<i class="devicon-github-original colored"></i>
+							<span>GitHub</span>
+						</div>
+						<div class="card">
+							<i class="devicon-gitlab-plain colored"></i>
+							<span>GitLab</span>
+						</div>
+						<div class="card">
+							<i class="devicon-vscode-plain colored"></i>
+							<span>VS Code</span>
+						</div>
+						<div class="card">
+							<i class="devicon-intellij-plain colored"></i>
+							<span>IntelliJ</span>
+						</div>
+						<div class="card">
+							<i class="devicon-bash-plain colored"></i>
+							<span>Scrum/Agile</span>
 						</div>
 					</div>
 					<div class="tab-content" id="soft">
 						<div class="card">
-							<img src="./Image/curiosity.png" alt="Curieuse" class="card-icon">
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">🎯</span>
+							<span>Polyvalente</span>
+						</div>
+						<div class="card">
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">✓</span>
+							<span>Rigoureuse</span>
+						</div>
+						<div class="card">
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">🤔</span>
 							<span>Curieuse</span>
 						</div>
 						<div class="card">
-							<img src="./Image/teamWork.svg" alt="Travail en équipe" class="card-icon">
-							<span>Travail en équipe</span>
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">⭐</span>
+							<span>Autonome</span>
 						</div>
 						<div class="card">
-							<img src="./Image/Communication.png" alt="Communication" class="card-icon">
-							<span>Communication</span>
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">🔄</span>
+							<span>Adaptable</span>
 						</div>
 						<div class="card">
-							<img src="./Image/proactive.svg" alt="Proactive" class="card-lang">
-							<span>Proactive</span>
+							<i class="devicon-github-original colored" style="margin-right: 0.5rem;"></i>
+							<span>Esprit d'équipe</span>
+						</div>
+						<div class="card">
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">📋</span>
+							<span>Sens de l'organisation</span>
 						</div>
 					</div>
 					<div class="tab-content" id="lang">
 						<div class="card">
-							<img src="./Image/fr.svg" alt="France" class="card-lang">
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">🇫🇷</span>
 							<span>Français (natif)</span>
 						</div>
 						<div class="card">
-							<img src="./Image/uk.svg" alt="United-kingdom" class="card-lang">
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">🇬🇧</span>
 							<span>Anglais (B2)</span>
 						</div>
 						<div class="card">
-							<img src="./Image/ch.svg" alt="Chine" class="card-lang">
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">🇨🇳</span>
 							<span>Chinois (natif)</span>
 						</div>
 					</div>
 					<div class="tab-content" id="interets">
 						<div class="card">
-							<img src="./Image/cybersecurity.svg" alt="Cybersécurité" class="card-icon">
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">🔒</span>
 							<span>Cybersécurité</span>
 						</div>
 						<div class="card">
-							<img src="./Image/joystick.svg" alt="Jeux vidéos" class="card-icon">
+							<i class="devicon-godot-plain colored"></i>
 							<span>Jeux vidéos</span>
 						</div>
 						<div class="card">
-							<img src="./Image/book.svg" alt="Lecture" class="card-icon">
+							<span style="font-size: 1.5em; margin-right: 0.5rem;">📚</span>
 							<span>Lecture</span>
 						</div>
 						<div class="card">
-							<img src="./Image/UX.svg" alt="Design Web" class="card-icon">
+							<i class="devicon-figma-plain colored"></i>
 							<span>Design Web</span>
 						</div>
 					</div>
@@ -355,9 +482,66 @@
 							</p>
 						</div>
 					</div>
+					<div class="project-card" onclick="openPopup('popup-repartition')">
+						<img src="./Image/Javaswing.png" alt="Gestion de Répartition">
+						<h3>Gestion de Répartition</h3>
+						<p>Application complète de gestion de groupes avec algorithmes d'optimisation</p>
+					</div>
+					<div class="popup-content" id="popup-repartition">
+						<div class="popup-inner">
+							<span class="close" onclick="closePopup('popup-repartition')">&times;</span>
+							<h3>Gestion de Répartition des Élèves</h3>
+							<p>
+								Application complète de gestion de répartition d'une promotion d'étudiants avec systèmes d'accès multi-rôles, gestion du covoiturage, et algorithmes d'optimisation pour la création de groupes équilibrés.
+							</p>
+							<h4>Fonctionnalités principales :</h4>
+							<ul>
+								<li>Système de génération d'accès multi-rôles (responsable de formation, enseignant, étudiant)</li>
+								<li>Gestion du profil étudiant et consultation des informations avec covoiturage</li>
+								<li>Consultation par les enseignants des informations de promotion et groupes</li>
+								<li>Consultation et import/export des données en ligne ou fichier</li>
+								<li>Ajout, importation et modification des informations étudiants par responsables</li>
+								<li>Configuration dynamique de la structure de groupes (nombre, équilibre, critères)</li>
+								<li>Algorithmes d'optimisation : Force Brute et Algorithme Glouton</li>
+								<li>Démonstration interactive de l'exécution et performance des algorithmes</li>
+							</ul>
+							<h4>Technologies :</h4>
+							<p><strong>Frontend :</strong> Java Swing (interface desktop)</p>
+							<img src="./Image/Javaswing.png" alt="Interface Java Swing">
+							<p><strong>Backend/Web :</strong> PHP avec site web</p>
+							<img src="./Image/sitePhp.png" alt="Site PHP">
+							<h4>Processus de conception :</h4>
+							<ul>
+								<li>Diagramme de cas d'utilisation UML</li>
+								<li>Maquettes d'interface sous Figma</li>
+								<li>Diagramme de navigation utilisateur</li>
+								<li>Dictionnaire de données</li>
+								<li>Graphe de Dépendance Fonctionnelle (GDF)</li>
+								<li>Modèle Conceptuel de Données (MCD)</li>
+								<li>Modèle Logique de Données (MCL)</li>
+								<li>Scripts SQL de création et gestion de base de données</li>
+							</ul>
+							<h4>Algorithmes d'optimisation :</h4>
+							<p>L'application démontre deux approches pour équilibrer les groupes :</p>
+							<ul>
+								<li><strong>Force Brute :</strong> Exploration complète de toutes les combinaisons possibles pour la solution optimale</li>
+								<li><strong>Algorithme Glouton :</strong> Approche heuristique pour une solution rapide et satisfaisante</li>
+							</ul>
+							<h4>Compétences développées :</h4>
+							<ul>
+								<li>Architecture logicielle et design patterns (MVC)</li>
+								<li>Gestion d'accès utilisateur et authentification</li>
+								<li>Algorithmes d'optimisation et performance</li>
+								<li>Modélisation et conception de bases de données</li>
+								<li>Développement full-stack (desktop + web)</li>
+								<li>Gestion de projet et documentation complète</li>
+								<li>UX/UI design et prototypage</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<p class="description">
-					Ces projets m'ont permis de consolider mes acquis en programmation orientée objet, en gestion de bases de données, et en systèmes réseaux. À travers ces expériences concrètes, j'ai renforcé ma capacité à travailler en équipe, à documenter mes choix techniques et à mener à bien des développements applicatifs complets. Je souhaite désormais poursuivre dans cette voie en approfondissant mes compétences dans le domaine de la cybersécurité et de l'ingénierie logicielle.
+					Ces projets m'ont permis de consolider mes compétences en programmation, en gestion de bases de données, en architecture logicielle et en systèmes informatiques. À travers ces expériences concrètes, j'ai renforcé ma capacité à concevoir des solutions robustes, à travailler en équipe, à documenter mes choix techniques et à livrer des développements applicatifs complets. Je cherche à approfondir mon expertise en ingénierie logicielle et à relever de nouveaux défis dans le domaine de l'informatique.
 				</p>
 			</section>
 		</main>
