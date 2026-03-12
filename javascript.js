@@ -11,61 +11,14 @@
     });
   });
 
-   function openPopup(id) {
+  function openPopup(id) {
     document.getElementById(id).classList.add('active');
   }
   function closePopup(id) {
     document.getElementById(id).classList.remove('active');
   }
 
-  // ===== THEME MANAGEMENT =====
-  function initTheme() {
-    // Détecter la préférence utilisateur ou charger depuis localStorage
-    const storedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    const theme = storedTheme || (prefersDark ? 'dark' : 'dark');
-
-    if (theme === 'light') {
-      document.documentElement.classList.add('light-mode');
-      updateThemeIcon('☀️');
-    } else {
-      document.documentElement.classList.remove('light-mode');
-      updateThemeIcon('🌙');
-    }
-  }
-
-  function toggleTheme() {
-    const html = document.documentElement;
-    const isLightMode = html.classList.toggle('light-mode');
-
-    const theme = isLightMode ? 'light' : 'dark';
-    localStorage.setItem('theme', theme);
-
-    updateThemeIcon(isLightMode ? '☀️' : '🌙');
-  }
-
-  function updateThemeIcon(icon) {
-    const btn = document.getElementById('theme-toggle');
-    if (btn) {
-      btn.querySelector('.theme-icon').textContent = icon;
-    }
-  }
-
-  // Initialiser le thème au chargement
-  document.addEventListener('DOMContentLoaded', initTheme);
-
-  // Ajouter listener au bouton toggle
-  document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', toggleTheme);
-    }
-  });
-
-  // ===== END THEME MANAGEMENT =====
-
-   document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".project-card, .formation-card, .tab-content");
 
     const observer = new IntersectionObserver((entries) => {
